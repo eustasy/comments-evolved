@@ -12,7 +12,7 @@
 			padding: 0;
 			font: 300 1em/1.4 'Open Sans';
 		}
-		a { text-decoration: none; }
+		a { text-decoration: none; color: #3a8ee6; }
 		h1, h2 { font-weight: 300; text-align: center; }
 	</style>
 	<script>

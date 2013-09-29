@@ -29,7 +29,7 @@
 	border: 0;
 	margin-right: 5px;
 }
-
+#comment-tabs a { text-decoration: none; color: #3a8ee6; }
 #comments-tabs iframe { width: 100%; border: none; margin: 0; }
 
 
