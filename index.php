@@ -62,8 +62,8 @@ $GplusCount = trim($GplusToTrim[0]);
 		</ul>
 
 		<div class="comments gplus" id="gplus">
-			<div class="g-comments" data-href="<?php echo $Domain, $Canonical; ?>" data-width="<?php echo $Width; ?>" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>
 			<script src="https://apis.google.com/js/plusone.js"></script>
+			<div class="g-comments" data-href="<?php echo $Domain, $Canonical; ?>" data-width="<?php echo $Width; ?>" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>
 		</div>
 
 		<div class="comments facebook" id="facebook">
