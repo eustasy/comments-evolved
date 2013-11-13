@@ -16,12 +16,12 @@
 		h1, h2 { font-weight: 300; text-align: center; }
 	</style>
 	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-28932148-12', 'eustasy.org');
-		ga('send', 'pageview');
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-45667989-11', 'eustasy.org');
+	  ga('send', 'pageview');
 	</script>
 </head>
 <body>
@@ -30,7 +30,7 @@
 
 	<h2>Google+</h2>
 	<p style="color:#df382c;">Google Plus comments do not appear to work on some pages/domains at this time.</p>
-	<p>Google Plus Comments are totally unsupported by Google. They were originally rolled out as part of Blogger, and are now making there way into YouTube. Until they are an official thing, there may be bugs. Bugs which are internal to there servers and happen only when this program is being used on sites they shouldn't (i.e. all of them). We can do nothing about this. Hopefully this script is simple enough for you to simple remove the Google Plus parts and make do with official systems.</p>
+	<p>Google Plus Comments are totally unsupported by Google. They were originally rolled out as part of Blogger, and are now making there way into YouTube. Until they are an official thing, there may be bugs. Bugs which are internal to their servers and happen only when this program is being used on sites they shouldn't (i.e. all of them). We can do nothing about this. Hopefully this script is simple enough for you to simple remove the Google Plus parts and make do with official systems.</p>
 
 	<h2>Facebook</h2>
 	<p>Facebook works automatically, all by itself.</p>
