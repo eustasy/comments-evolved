@@ -6,8 +6,30 @@ function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Face
 
 	require 'CommentsEvolved_Config.php';
 
+	if($Load_jQuery){
+		echo '
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script type="text/javascript">window.jQuery || document.write(\'<script src="http://labs.eustasy.org/js/jquery-1.10.2.min.js"><\/script>\');</script>
+		<![endif]-->
+		<!--[if IE 9]><!-->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+			<script>window.jQuery || document.write(\'<script src="http://labs.eustasy.org/js/jquery-2.0.3.min.js"><\/script>\');</script>
+		<!--<![endif]-->';
+	}
+
 	echo '
-	<div id="commentevolved-tabs">
+		<script src="jquery.ui.core.min.js"></script>
+		<script src="jquery.ui.widget.min.js"></script>
+		<script src="jquery.ui.tabs.min.js"></script>
+		<script>
+		$(function() {
+			$(\'#commentsevolved-tabs\').tabs();
+		});
+		</script>';
+
+	echo '
+	<div id="commentsevolved-tabs">
 		<ul>';
 	if($Disqus) echo '			<li><a class="tabs disqus" href="#disqus">Disqus <span id="disqus-count"></span></a></li>';
 	if($Facebook) echo '			<li><a class="tabs facebook" href="#facebook">Facebook <span id="facebook-count"></span></a></li>';
@@ -38,7 +60,7 @@ function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Face
 			<div id="fb-replace">Loading Facebook Comments ...</div>
 			<script type="text/javascript">
 				$(document).ready(function($){
-					$(\'#fb-replace\').html(\'<div class="fb-comments" data-width="'.$Width.'" data-href="'.$Canonical.'" data-num-posts="10" data-colorscheme="light" data-mobile="auto"></div>\');
+					$(\'#fb-replace\').html(\'<div class="fb-comments" data-width="'.$CommentsEvolved_Width.'" data-href="'.$Canonical.'" data-num-posts="10" data-colorscheme="light" data-mobile="auto"></div>\');
 				});
 			</script>
 			<script async type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1">FB.init();</script>
@@ -49,7 +71,7 @@ function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Face
 		<div class="comments gplus" id="gplus">
 			<script>
 				$(document).ready(function($) {
-					$(\'#gplus-replace\').html(\'<div class="g-comments" data-width="'.$Width.'" data-href="'.$Canonical.'" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>\');
+					$(\'#gplus-replace\').html(\'<div class="g-comments" data-width="'.$CommentsEvolved_Width.'" data-href="'.$Canonical.'" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>\');
 				});
 			</script>
 			<div id="gplus-replace"></div>
@@ -60,28 +82,10 @@ function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Face
 	echo '
 	</div>';
 
-	if($Load_jQuery){
-		echo '
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-			<script type="text/javascript">window.jQuery || document.write(\'<script src="http://labs.eustasy.org/js/jquery-1.10.2.min.js"><\/script>\');</script>
-		<![endif]-->
-		<!--[if IE 9]><!-->
-			<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-			<script>window.jQuery || document.write(\'<script src="http://labs.eustasy.org/js/jquery-2.0.3.min.js"><\/script>\');</script>
-		<!--<![endif]-->';
-	}
-
-	echo '
-		<script src="jquery.ui.core.min.js"></script>
-		<script src="jquery.ui.widget.min.js"></script>
-		<script src="jquery.ui.tabs.min.js"></script>
-		<script>$(\'#comment-tabs\').tabs();</script>';
-
 	if($Disqus) echo '
 	<script>
 	$(function(){
-		$.getJSON(\'http://disqus.com/api/3.0/threads/details.json?api_key='.$Disqus_Key.'&forum='.$DisqusShortname.'&thread:link='.$Canonical.'&callback=?\', function(countDisqus) {
+		$.getJSON(\'http://disqus.com/api/3.0/threads/details.json?api_key='.$Disqus_Key.'&forum='.$Disqus_Shortname.'&thread:link='.$Canonical.'&callback=?\', function(countDisqus) {
 		if (!countDisqus.response.posts) {
 				$(\'#disqus-count\').html(\'(0)\');
 			} else {
