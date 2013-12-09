@@ -1,6 +1,6 @@
 <?php
 
-function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Facebook=true,$GooglePlus=true,$Load_jQuery=false){
+function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Facebook=true,$GooglePlus=true,$Load_jQuery=true){
 
 	if(!$Disqus&&!$Facebook&&!$GooglePlus) return false;
 
