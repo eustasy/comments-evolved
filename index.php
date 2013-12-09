@@ -1,10 +1,14 @@
-<?php require 'comments-evolved-config.php'; ?><!DocType html>
+<!DocType html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Comments Evolved for Websites &nbsp;&middot;&nbsp; eustasy Labs</title>
 	<link rel="icon" href="//eustasy.org/favicon.ico">
-	<?php require 'comments-evolved-header.php'; ?>
+	<?php
+		$Canonical = 'http://labs.eustasy.org/comments-evolved/';
+		require 'CommentsEvolved_Header.php';
+		CommentsEvolved_Header($Canonical);
+	?>
 	<style>
 		body {
 			width: 720px;
@@ -16,12 +20,12 @@
 		h1, h2 { font-weight: 300; text-align: center; }
 	</style>
 	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-45667989-11', 'eustasy.org');
-	  ga('send', 'pageview');
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-45667989-11', 'eustasy.org');
+		ga('send', 'pageview');
 	</script>
 </head>
 <body>
@@ -40,7 +44,10 @@
 
 	<h2>Comments</h2>
 
-	<?php require 'comments-evolved-comments.php'; ?>
+	<?php
+		require 'CommentsEvolved_Comments.php';
+		CommentsEvolved_Comments($Canonical,'Comments Evolved for HTML',true,true,true,true);
+	?>
 
 <body>
 </html>
