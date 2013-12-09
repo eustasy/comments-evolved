@@ -30,6 +30,8 @@
 </head>
 <body>
 
+	<a href="https://github.com/eustasy/comments-evolved"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Comments Evolved on GitHub" style="position: absolute; top: 0; right: 0;"></a>
+
 	<h1>Comments Evolved for Websites</h1>
 
 	<h2>Google+</h2>
