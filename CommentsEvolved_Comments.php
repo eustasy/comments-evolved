@@ -81,7 +81,7 @@ function CommentsEvolved_GPlus($Canonical) {
 		</div>';
 }
 
-function CommentsEvolved_Disqus_Count($Canonical,$ID='ce-disqus-count') {
+function CommentsEvolved_Disqus_Count($Canonical,$ID='#ce-disqus-count') {
 	require 'CommentsEvolved_Config.php';
 	echo '
 	<script>
@@ -97,7 +97,7 @@ function CommentsEvolved_Disqus_Count($Canonical,$ID='ce-disqus-count') {
 	</script>';
 }
 
-function CommentsEvolved_Facebook_Count($Canonical,$ID='ce-facebook-count') {
+function CommentsEvolved_Facebook_Count($Canonical,$ID='#ce-facebook-count') {
 	echo '
 	<script>
 	$(function(){
@@ -123,7 +123,7 @@ function CommentsEvolved_Facebook_Count($Canonical,$ID='ce-facebook-count') {
 
 // The new way (which doesn't work)
 
-function CommentsEvolved_GPlus_Count($Canonical,$ID='ce-gplus-count') {
+function CommentsEvolved_GPlus_Count($Canonical,$ID='#ce-gplus-count') {
 	echo '
 	<script>
 	$(function(){
