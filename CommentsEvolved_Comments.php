@@ -88,7 +88,7 @@ function CommentsEvolved_Disqus_Count($Canonical,$ID='ce-disqus-count') {
 	$(function(){
 		$.getJSON(\'http://disqus.com/api/3.0/threads/details.json?api_key='.$Disqus_Key.'&forum='.$Disqus_Shortname.'&thread:link='.$Canonical.'&callback=?\', function(countDisqus) {
 		if (!countDisqus.response.posts) {
-				$(\''.$ID.''\').html(\'(0)\');
+				$(\''.$ID.'\').html(\'(0)\');
 			} else {
 				$(\''.$ID.'\').html(\'(\' + countDisqus.response.posts + \')\');
 			}
