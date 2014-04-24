@@ -61,7 +61,7 @@ function CommentsEvolved_Facebook($Canonical) {
 					$(\'#fb-replace\').html(\'<div class="fb-comments" data-width="'.$CommentsEvolved_Width.'" data-href="'.$Canonical.'" data-num-posts="10" data-colorscheme="light" data-mobile="auto"></div>\');
 				});
 			</script>
-			<script async type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1">FB.init();</script>
+			<script type="text/javascript" src="//connect.facebook.net/en_US/all.js#xfbml=1">FB.init();</script>
 			<noscript>Please enable JavaScript to view the <a href="https://www.facebook.com/">comments powered by Facebook.</a></noscript>
 		</div>';
 }
