@@ -127,18 +127,17 @@ function CommentsEvolved_Facebook_Count($Canonical,$ID='#ce-facebook-count') {
 //$GplusCount = trim($GplusToTrim[0]);
 
 
-// The new way (which doesn't work)
+// The new way (which doesn't work as Google doesn't allow cross-site-access to it)
 
 function CommentsEvolved_GPlus_Count($Canonical,$ID='#ce-gplus-count') {
 	echo '
 	<script>
 	$(function(){
 		$.get(\'https://apis.google.com/_/widget/render/commentcount?bsv&href='.$Canonical.'&callback=?\', function(countGPlus) {
-		if (!countGPlus.comments) {
-				$(\''.$ID.'\').html(\'(0)\');
-			} else {
-				$(\''.$ID.'\').html(\'(\' + countGPlus.comments + \')\');
-			}
+			console.log(countGPlus);
+			// TODO
+			$(\'countGPlus #widget_bounds span\').html(\'(\' + countGPlus.comments + \')\');
+			$(\''.$ID.'\').html(\'(\' + countGPlus.comments + \')\');
 		})
 	});
 	</script>';
@@ -166,5 +165,6 @@ function CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,$Disqus=true,$Face
 
 	if($Disqus) CommentsEvolved_Disqus_Count($Canonical);
 	if($Facebook) CommentsEvolved_Facebook_Count($Canonical);
+	// if($GooglePlus) CommentsEvolved_GPlus_Count($Canonical);
 
 }
