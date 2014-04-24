@@ -6,7 +6,7 @@
 	<link rel="icon" href="//eustasy.org/favicon.ico">
 	<?php
 		$Canonical = 'http://labs.eustasy.org/comments-evolved/';
-		require 'CommentsEvolved_Header.php';
+		require 'CommentsEvolved.php';
 		CommentsEvolved_Header($Canonical);
 	?>
 	<style>
@@ -47,8 +47,7 @@
 	<h2>Comments</h2>
 
 	<?php
-		require 'CommentsEvolved_Comments.php';
-		CommentsEvolved_Comments($Canonical,'Comments Evolved for HTML',true,true,true,true);
+		CommentsEvolved_Comments($Canonical, 'Comments Evolved for HTML', true, true, true, true);
 	?>
 
 <body>
