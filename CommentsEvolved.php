@@ -128,7 +128,6 @@ function CommentsEvolved_GPlus($Canonical) {
 
 function CommentsEvolved_Disqus_Count($Canonical, $ID = '#ce-disqus-count') {
 	global $Disqus_Key, $Disqus_Shortname;
-	require 'CommentsEvolved_Config.php';
 	echo '
 	<script>
 	$(function(){
