@@ -29,8 +29,8 @@ function CommentsEvolved_Header($Canonical){
 
 	echo '
 	<link rel="canonical" href="'.$Canonical.'">
-	<link rel="author" href="//plus.google.com/'.$Google_Author_ID.'?rel=author">
-	<link rel="publisher" href="//plus.google.com/'.$Google_Publisher_ID.'?rel=publisher">
+	<link rel="author" href="https://plus.google.com/'.$Google_Author_ID.'?rel=author">
+	<link rel="publisher" href="https://plus.google.com/'.$Google_Publisher_ID.'?rel=publisher">
 	<link rel="stylesheet" type="text/css" media="all" href="commentsevolved.min.css">';
 
 }
@@ -42,17 +42,8 @@ function CommentsEvolved_Header($Canonical){
 function CommentsEvolved_LoadjQuery() {
 	global $CommentsEvolved_JSPath;
 	echo '
-	<!--[if lt IE 9]>
-		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript">window.jQuery || document.write(\'<script src="'.$CommentsEvolved_JSPath.'jquery-1.10.2.min.js"><\/script>\');</script>
-	<![endif]-->
-	<!--[if IE 9]><!-->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-		<script>window.jQuery || document.write(\'<script src="'.$CommentsEvolved_JSPath.'jquery-2.0.3.min.js"><\/script>\');</script>
-	<!--<![endif]-->
-	<script src="'.$CommentsEvolved_JSPath.'jquery.ui.core.min.js"></script>
-	<script src="'.$CommentsEvolved_JSPath.'jquery.ui.widget.min.js"></script>
-	<script src="'.$CommentsEvolved_JSPath.'jquery.ui.tabs.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
 	<script>$(function(){$(\'#commentsevolved-tabs\').tabs()})</script>';
 }
 
