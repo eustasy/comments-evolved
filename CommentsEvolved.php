@@ -4,8 +4,8 @@
 
 // Global Variables
 $CommentsEvolved_Width = '720';
-$CommentsEvolved_Domain = 'http://labs.eustasy.org/';
-$CommentsEvolved_JSPath = 'http://labs.eustasy.org/js/';
+$CommentsEvolved_Domain = 'https://labs.eustasy.org/';
+$CommentsEvolved_JSPath = 'https://labs.eustasy.org/js/';
 
 // Google Plus IDs
 $Google_Publisher_ID = '104940724208411264664';
@@ -14,7 +14,7 @@ $Google_Author_ID = '105729291739660012806';
 // Disqus Shortname
 $Disqus_Shortname = 'eustasylabs';
 // Disqus Key
-// The Public one from http://disqus.com/api/applications/
+// The Public one from https://disqus.com/api/applications/
 $Disqus_Key = 'bFpSneWZaAvysz7PfIclEj3PLexRlxPjBSOui1eun65twXRbRxVlcq09TBzRk1xC';
 
 //// 	END Configuration
@@ -76,7 +76,7 @@ function CommentsEvolved_Disqus($Canonical, $HTML_Safe_Title) {
 					(document.getElementsByTagName(\'head\')[0] || document.getElementsByTagName(\'body\')[0]).appendChild(dsq);
 				})();
 			</script>
-			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		</div>';
 }
 
@@ -122,7 +122,7 @@ function CommentsEvolved_Disqus_Count($Canonical, $ID = '#ce-disqus-count') {
 	echo '
 	<script>
 	$(function(){
-		$.getJSON(\'http://disqus.com/api/3.0/threads/details.json?api_key='.$Disqus_Key.'&forum='.$Disqus_Shortname.'&thread:link='.$Canonical.'&callback=?\', function(countDisqus) {
+		$.getJSON(\'https://disqus.com/api/3.0/threads/details.json?api_key='.$Disqus_Key.'&forum='.$Disqus_Shortname.'&thread:link='.$Canonical.'&callback=?\', function(countDisqus) {
 		if (!countDisqus.response.posts) {
 				$(\''.$ID.'\').html(\'(0)\');
 			} else {
@@ -137,7 +137,7 @@ function CommentsEvolved_Facebook_Count($Canonical, $ID = '#ce-facebook-count') 
 	echo '
 	<script>
 	$(function(){
-		$.getJSON(\'http://graph.facebook.com/'.$Canonical.'?callback=?\', function(countFacebook) {
+		$.getJSON(\'https://graph.facebook.com/'.$Canonical.'?callback=?\', function(countFacebook) {
 		if (!countFacebook.comments) {
 				$(\''.$ID.'\').html(\'(0)\');
 			} else {

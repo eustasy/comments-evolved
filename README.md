@@ -3,17 +3,17 @@
 
 Comments Evolved for HTML is two small PHP functions for activating various commenting systems on any php based website.
 
-If you're looking for integration on WordPress, or just want to see the "original" (very little of that code remains), then there is a [plugin page](http://wordpress.org/plugins/gplus-comments/) and a [GitHub repo](https://github.com/CloudHeroDevOps/comments-evolved) you can look at.
+If you're looking for integration on WordPress, or just want to see the "original" (very little of that code remains), then there is a [plugin page](https://wordpress.org/plugins/gplus-comments/) and a [GitHub repo](https://github.com/CloudHeroDevOps/comments-evolved) you can look at.
 
 ###Setup
-In the `CommentsEvolved_Config.php` file, change the Disqus Shortname and API Key to your own. To obtain these will need to [sign up your site](https://disqus.com/admin/signup/) and [register an applicatiom](http://disqus.com/api/applications/).
+In the `CommentsEvolved_Config.php` file, change the Disqus Shortname and API Key to your own. To obtain these will need to [sign up your site](https://disqus.com/admin/signup/) and [register an applicatiom](https://disqus.com/api/applications/).
 
 You may also wish to change the default Publisher and Author IDs if your are planning to use CommentsEvolved_Header.php
 
 ###Usage
 To use, do somethings like this.
 ```
-$Canonical = 'http://example.com/hello-owl'
+$Canonical = 'https://example.com/hello-owl'
 $HTML_Safe_Title = 'Hello Owl';
 
 require 'CommentsEvolved_Comments.php';
