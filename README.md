@@ -1,5 +1,9 @@
-[Comments Evolved](https://github.com/eustasy/comments-evolved)
-=======================
+# [Comments Evolved](https://github.com/eustasy/comments-evolved)
+
+[![Build Status](https://travis-ci.org/eustasy/comments-evolved.svg?branch=master)](https://travis-ci.org/eustasy/comments-evolved)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/75aa613d9bc845f4aaa8d3e32aba2b14)](https://www.codacy.com/app/lewisgoddard/comments-evolved?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eustasy/comments-evolved&amp;utm_campaign=Badge_Grade)
+[![Code Climate](https://codeclimate.com/github/eustasy/comments-evolved/badges/gpa.svg)](https://codeclimate.com/github/eustasy/comments-evolved)
+[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=263640)](https://www.bountysource.com/teams/eustasy/issues?tracker_ids=263640)
 
 Comments Evolved for HTML is two small PHP functions for activating various commenting systems on any php based website.
 
