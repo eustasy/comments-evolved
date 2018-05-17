@@ -14,7 +14,7 @@ $Sitewide['Settings']['CommentsEvolved']['Google']['Author']    = '1057292917396
 $Sitewide['Settings']['CommentsEvolved']['Disqus']['Shortname'] = 'eustasylabs';
 // Disqus Key
 // The Public one from https://disqus.com/api/applications/
-$Sitewide['Settings']['CommentsEvolved']['Disqus']['Key']    = 'bFpSneWZaAvysz7PfIclEj3PLexRlxPjBSOui1eun65twXRbRxVlcq09TBzRk1xC';
+$Sitewide['Settings']['CommentsEvolved']['Disqus']['APIKey']    = 'bFpSneWZaAvysz7PfIclEj3PLexRlxPjBSOui1eun65twXRbRxVlcq09TBzRk1xC';
 
 // Version
 $Sitewide['Version']['CommentsEvolved'] = '1.3.0-alpha';
