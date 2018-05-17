@@ -10,5 +10,5 @@ function CommentsEvolved_Header(string $Canonical): string {
 	<link rel="publisher" href="https://plus.google.com/'.
 	$Sitewide['Settings']['CommentsEvolved']['Google']['Publisher'].'?rel=publisher">
 	<link rel="stylesheet" type="text/css" media="all" href="'.
-	$Sitewide['Settings']['CommentsEvolved']['CSSPath'].'commentsevolved.min.css">';
+	$Sitewide['Settings']['CommentsEvolved']['CSSPath'].'commentsevolved.min.css">'.PHP_EOL;
 }

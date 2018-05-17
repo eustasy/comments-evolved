@@ -10,25 +10,25 @@ function CommentsEvolved_Comments(
 ): string {
 
 	$CE = '';
-	if (!$Disqus && !$Facebook && !$GooglePlus) return $CE;
+	if ( !$Disqus && !$Facebook && !$GooglePlus ) return $CE;
 
-	if ($Load_jQuery) $CE += CommentsEvolved_LoadjQuery();
+	if ( $Load_jQuery ) $CE .= CommentsEvolved_LoadjQuery();
 
-	$CE +=  '
+	$CE .=  '
 	<div class="commentsevolved-tabs">';
 
-	$CE += CommentsEvolved_Tabs($Disqus, $Facebook, $GooglePlus);
+	$CE .= CommentsEvolved_Tabs($Disqus, $Facebook, $GooglePlus);
 
-	if ($Disqus) $CE += CommentsEvolved_Disqus($Canonical, $HTML_Safe_Title);
-	if ($Facebook) $CE += CommentsEvolved_Facebook($Canonical);
-	if ($GooglePlus) $CE += CommentsEvolved_GPlus($Canonical);
+	if ( $Disqus ) $CE .= CommentsEvolved_Disqus($Canonical, $HTML_Safe_Title);
+	if ( $Facebook ) $CE .= CommentsEvolved_Facebook($Canonical);
+	if ( $GooglePlus ) $CE .= CommentsEvolved_GPlus($Canonical);
 
-	$CE +=  '
+	$CE .=  '
 	</div>';
 
-	if ($Disqus) $CE += CommentsEvolved_Disqus_Count($Canonical);
-	if ($Facebook) $CE += CommentsEvolved_Facebook_Count($Canonical);
-	if ($GooglePlus) $CE += CommentsEvolved_GPlus_Count($Canonical);
+	if ( $Disqus ) $CE .= CommentsEvolved_Disqus_Count($Canonical);
+	if ( $Facebook ) $CE .= CommentsEvolved_Facebook_Count($Canonical);
+	if ( $GooglePlus ) $CE .= CommentsEvolved_GPlus_Count($Canonical);
 
 	return $CE;
 }

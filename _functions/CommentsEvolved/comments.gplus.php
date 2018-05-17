@@ -3,7 +3,8 @@
 // WARNING: Experimental
 function CommentsEvolved_GPlus(string $Canonical): string {
 	global $Sitewide;
-	echo '
+
+	return '
 		<div class="comments gplus" class="gplus">
 			<script>
 				$(document).ready(function($) {
