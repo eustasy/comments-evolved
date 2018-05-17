@@ -23,12 +23,19 @@
 }
 .commentsevolved-tabs ul li img {
 	width: 16px;
-	padding: 0px;
+	padding: 0;
 	border: 0;
 	margin-right: 5px;
 }
-.commentsevolved-tabs a { text-decoration: none; color: #3a8ee6; }
-.comments-tabs iframe { width: 100%; border: none; margin: 0; }
+.commentsevolved-tabs a {
+	color: #3a8ee6;
+	text-decoration: none;
+}
+.comments-tabs iframe {
+	border: none;
+	margin: 0;
+	width: 100%;
+}
 .commentsevolved-tabs .ui-helper-hidden {
 	display: none;
 }
@@ -52,13 +59,13 @@
 	font-size: 100%;
 	list-style: none;
 }
-.commentsevolved-tabs .ui-helper-clearfix:before,
-.commentsevolved-tabs .ui-helper-clearfix:after {
-	content: "";
+.commentsevolved-tabs .ui-helper-clearfix::before,
+.commentsevolved-tabs .ui-helper-clearfix::after {
+	content: '';
 	display: table;
 	border-collapse: collapse;
 }
-.commentsevolved-tabs .ui-helper-clearfix:after {
+.commentsevolved-tabs .ui-helper-clearfix::after {
 	clear: both;
 }
 .commentsevolved-tabs .ui-helper-clearfix {
@@ -70,7 +77,6 @@
 	top: 0;
 	left: 0;
 	position: absolute;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
 	opacity: 0;
 }
@@ -86,7 +92,7 @@
 }
 .commentsevolved-tabs .ui-tabs-nav {
 	margin: 0;
-	padding: .2em .2em 0;
+	padding: 0.2em 0.2em 0;
 }
 .commentsevolved-tabs .ui-tabs-nav li {
 	list-style: none;
@@ -119,7 +125,7 @@
 	background: transparent;
 	border: none;
 	border-bottom: 1px solid #c0c0c0;
-	border-radius: 0px;
+	border-radius: 0;
 }
 .commentsevolved-tabs .ui-tabs-nav .ui-state-default {
 	background: transparent;
