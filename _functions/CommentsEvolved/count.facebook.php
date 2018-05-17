@@ -7,10 +7,10 @@ function CommentsEvolved_Facebook_Count(string $Canonical, string $Count = '.ce-
 		$.getJSON(
 			\'https://graph.facebook.com/'.$Canonical.'?callback=?\',
 			function(countFacebook) {
-				if (!countFacebook.comments) {
+				if (!countFacebook.share.comment_count) {
 					$(\''.$Count.'\').html(\'(0)\');
 				} else {
-					$(\''.$Count.'\').html(\'(\' + countFacebook.comments + \')\');
+					$(\''.$Count.'\').html(\'(\' + countFacebook.share.comment_count + \')\');
 				}
 			}
 		)
