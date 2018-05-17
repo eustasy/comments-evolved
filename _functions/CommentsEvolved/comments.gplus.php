@@ -5,7 +5,7 @@ function CommentsEvolved_GPlus(string $Canonical): string {
 	global $Sitewide;
 
 	return '
-		<div class="comments gplus" class="gplus">
+		<div class="comments gplus" id="gplus">
 			<script>
 				$(document).ready(function($) {
 					$(\'#gplus-replace\').html(\'<div class="g-comments" data-width="'.

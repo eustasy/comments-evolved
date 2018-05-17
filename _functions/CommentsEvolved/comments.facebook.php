@@ -4,7 +4,7 @@ function CommentsEvolved_Facebook(string $Canonical): string {
 	global $Sitewide;
 
 	return '
-		<div class="comments facebook" class="facebook">
+		<div class="comments facebook" id="facebook">
 			<div id="fb-root"></div>
 			<div id="fb-replace">Loading Facebook Comments ...</div>
 			<script type="text/javascript">
