@@ -24,4 +24,4 @@ function CommentsEvolved_GPlus_Count(string $Canonical, string $Count = '.ce-gpl
 		)
 	});
 	</script>';
-} // TODO Fix GPlus Counts
+}
