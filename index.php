@@ -62,7 +62,7 @@
 			'Comments Evolved for HTML',
 			true,
 			true,
-			true,
+			false,
 			true
 		);
 	?>
