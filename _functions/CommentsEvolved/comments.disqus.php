@@ -5,7 +5,7 @@ function CommentsEvolved_Disqus(string $Canonical, string $HTML_Safe_Title): str
 
 	return '
 		<div class="comments disqus" class="disqus">
-			<div class="disqus_thread">Loading Disqus Comments...</div>
+			<div id="disqus_thread">Loading Disqus Comments...</div>
 			<script>
 				var disqus_shortname = \''.$Sitewide['Settings']['CommentsEvolved']['Disqus']['Shortname'].'\';
 				var disqus_title = \''.$HTML_Safe_Title.'\';

@@ -5,8 +5,8 @@ function CommentsEvolved_Facebook(string $Canonical): string {
 
 	return '
 		<div class="comments facebook" class="facebook">
-			<div class="fb-root"></div>
-			<div class="fb-replace">Loading Facebook Comments ...</div>
+			<div id="fb-root"></div>
+			<div id="fb-replace">Loading Facebook Comments ...</div>
 			<script type="text/javascript">
 				$(document).ready(function($){
 					$(\'#fb-replace\').html(\'<div class="fb-comments" data-width="'.
