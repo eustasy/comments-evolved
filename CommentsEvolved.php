@@ -42,8 +42,8 @@ function CommentsEvolved_Header($Canonical){
 function CommentsEvolved_LoadjQuery() {
 	global $CommentsEvolved_JSPath;
 	echo '
-	<script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery/3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.ui/1/jquery-ui.min.js"></script>
 	<script>$(function(){$(\'#commentsevolved-tabs\').tabs()})</script>';
 }
 
@@ -51,11 +51,11 @@ function CommentsEvolved_Tabs($Disqus = true, $Facebook = true, $GooglePlus = tr
 	echo '
 	<ul>';
 	if ($Disqus) echo '
-		<li><a class="tabs disqus" href="#disqus">Disqus <span id="ce-disqus-count"></span></a></li>';
+		<li><a class="tabs disqus" href="#disqus">Disqus <span class="ce-disqus-count"></span></a></li>';
 	if ($Facebook) echo '
-		<li><a class="tabs facebook" href="#facebook">Facebook <span id="ce-facebook-count"></span></a></li>';
+		<li><a class="tabs facebook" href="#facebook">Facebook <span class="ce-facebook-count"></span></a></li>';
 	if ($GooglePlus) echo '
-		<li><a class="tabs gplus" href="#gplus">Google+ <span id="ce-gplus-count"></span></a></li>';
+		<li><a class="tabs gplus" href="#gplus">Google+ <span class="ce-gplus-count"></span></a></li>';
 	echo '
 	</ul>';
 }
@@ -63,8 +63,8 @@ function CommentsEvolved_Tabs($Disqus = true, $Facebook = true, $GooglePlus = tr
 function CommentsEvolved_Disqus($Canonical, $HTML_Safe_Title) {
 	global $Disqus_Shortname;
 	echo '
-		<div class="comments disqus" id="disqus">
-			<div id="disqus_thread">Loading Disqus Comments...</div>
+		<div class="comments disqus" class="disqus">
+			<div class="disqus_thread">Loading Disqus Comments...</div>
 			<script>
 				var disqus_shortname = \''.$Disqus_Shortname.'\';
 				var disqus_title = \''.$HTML_Safe_Title.'\';
@@ -83,9 +83,9 @@ function CommentsEvolved_Disqus($Canonical, $HTML_Safe_Title) {
 function CommentsEvolved_Facebook($Canonical) {
 	global $CommentsEvolved_Width;
 	echo '
-		<div class="comments facebook" id="facebook">
-			<div id="fb-root"></div>
-			<div id="fb-replace">Loading Facebook Comments ...</div>
+		<div class="comments facebook" class="facebook">
+			<div class="fb-root"></div>
+			<div class="fb-replace">Loading Facebook Comments ...</div>
 			<script type="text/javascript">
 				$(document).ready(function($){
 					$(\'#fb-replace\').html(\'<div class="fb-comments" data-width="'.$CommentsEvolved_Width.'" data-href="'.$Canonical.'" data-num-posts="10" data-colorscheme="light" data-mobile="auto"></div>\');
@@ -105,13 +105,13 @@ function CommentsEvolved_Facebook($Canonical) {
 function CommentsEvolved_GPlus($Canonical) {
 	global $CommentsEvolved_Width;
 	echo '
-		<div class="comments gplus" id="gplus">
+		<div class="comments gplus" class="gplus">
 			<script>
 				$(document).ready(function($) {
 					$(\'#gplus-replace\').html(\'<div class="g-comments" data-width="'.$CommentsEvolved_Width.'" data-href="'.$Canonical.'" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>\');
 				});
 			</script>
-			<div id="gplus-replace"></div>
+			<div class="gplus-replace"></div>
 			<script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
 			<noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript><script src="//apis.google.com/js/plusone.js"></script>
 		</div>';
@@ -165,7 +165,7 @@ function CommentsEvolved_GPlus_Count($Canonical, $ID = '#ce-gplus-count') {
 	$(function(){
 		$.get(\'https://apis.google.com/_/widget/render/commentcount?bsv&href='.$Canonical.'&callback=?\', function(countGPlus) {
 			console.log(countGPlus);
-			// TODO
+			// TODO Fix GPlus Counts
 			$(\'countGPlus #widget_bounds span\').html(\'(\' + countGPlus.comments + \')\');
 			$(\''.$ID.'\').html(\'(\' + countGPlus.comments + \')\');
 		})
@@ -173,14 +173,14 @@ function CommentsEvolved_GPlus_Count($Canonical, $ID = '#ce-gplus-count') {
 	</script>';
 }
 
-function CommentsEvolved_Comments($Canonical, $HTML_Safe_Title, $Disqus = true, $Facebook = true, $GooglePlus = true, $Load_jQuery = true) {
+function CommentsEvolved_Comments($Canonical, $HTML_Safe_Title, $Disqus = true, $Facebook = true, $GooglePlus = false, $Load_jQuery = true) {
 
 	if (!$Disqus && !$Facebook && !$GooglePlus) return false;
 
 	if ($Load_jQuery) CommentsEvolved_LoadjQuery();
 
 	echo '
-	<div id="commentsevolved-tabs">';
+	<div class="commentsevolved-tabs">';
 
 	CommentsEvolved_Tabs($Disqus, $Facebook, $GooglePlus);
 

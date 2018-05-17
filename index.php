@@ -57,7 +57,14 @@
 	<h2>Comments</h2>
 
 	<?php
-		CommentsEvolved_Comments($Canonical, 'Comments Evolved for HTML', true, true, true, true);
+		CommentsEvolved_Comments(
+			$Canonical,
+			'Comments Evolved for HTML',
+			true,
+			true,
+			true,
+			true
+		);
 	?>
 
 <body>

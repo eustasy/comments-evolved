@@ -26,7 +26,7 @@ CommentsEvolved_Header($Canonical);
 
 require 'CommentsEvolved_Comments.php';
 
-CommentsEvolved_Comments($Canonical,$HTML_Safe_Title,true,true,false,true);
+CommentsEvolved_Comments($Canonical, $HTML_Safe_Title);
 
 /* CommentsEvolved_Comments(
 	$Canonical, // Canonical URL
