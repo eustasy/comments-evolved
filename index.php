@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<link rel="icon" href="https://labs.eustasy.org/favicon.ico">
 	<title>Comments Evolved for Websites &nbsp;&middot;&nbsp; eustasy Labs</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/g/normalize,colors.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/eustasy/Colors.css@1/colors.min.css,gh/necolas/normalize.css@8/normalize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lusitana|Source+Code+Pro" data-noprefix>
 	<link rel="stylesheet" href="/assets/css/grid.min.css">
 	<link rel="stylesheet" href="/assets/css/labs.css">
 	<?php
 		$Canonical = 'https://labs.eustasy.org/comments-evolved/';
-		require 'CommentsEvolved.php';
-		CommentsEvolved_Header($Canonical);
+		require '_functions/CommentsEvolved/autoload.php';
+		echo CommentsEvolved_Header($Canonical);
 	?>
 	<style>
 		body {
@@ -52,12 +52,12 @@
 	<p>Facebook works automatically, all by itself.</p>
 
 	<h2>Disqus</h2>
-	<p class="text-left">For Disqus comments you will need a <a href="//disqus.com/admin/signup/">Disqus account</a>. You'll need to add each website you want to host comments on, and configure each individual shortname for each one. You'll also need your <a href="//disqus.com/api/applications/">API Key</a> from an appliction (i recommend you <a href="//disqus.com/api/applications/register/">create a new one</a>) which will allow you to fetch the number of comments 1,000 times an hour. If you will be exceeding that limit, you will need to contact them to raise your plan, or remove the Disqus comment counter from within this script.</p>
+	<p class="text-left">For Disqus comments you will need a <a href="https://disqus.com/admin/signup/">Disqus account</a>. You'll need to add each website you want to host comments on, and configure each individual shortname for each one. You'll also need your <a href="https://disqus.com/api/applications/">API Key</a> from an appliction (i recommend you <a href="https://disqus.com/api/applications/register/">create a new one</a>) which will allow you to fetch the number of comments 1,000 times an hour. If you will be exceeding that limit, you will need to contact them to raise your plan, or remove the Disqus comment counter from within this script.</p>
 
 	<h2>Comments</h2>
 
 	<?php
-		CommentsEvolved_Comments(
+		echo CommentsEvolved_Comments(
 			$Canonical,
 			'Comments Evolved for HTML',
 			true,
