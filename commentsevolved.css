@@ -132,7 +132,7 @@
 	border: none;
 }
 .commentsevolved-tabs .ui-tabs-nav .ui-state-active {
-	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAN0lEQVQ4y2NgGAWjgAA4cODAfxAmWzMMkGwIsmaSDcGmmWhD8GkmaAgxmnEaQopmDEPI0YxsCABrFhMg5A67XAAAAABJRU5ErkJggg==) no-repeat 49% 100%;
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAN0lEQVQ4y2NgGAWjgAA4cODAfxAmWzMMkGwIsmaSDcGmmWhD8GkmaAgxmnEaQopmDEPI0YxsCABrFhMg5A67XAAAAABJRU5ErkJggg==') no-repeat 49% 100%;
 	border: none;
 	outline: none;
 }
